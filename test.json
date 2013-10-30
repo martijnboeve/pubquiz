@@ -1,0 +1,55 @@
+{
+	"questions": [
+		{ 
+			"questionId":"1",
+			"time":"10",
+			"question":"Hoe lang bestaat Redhotminute inmiddels?",
+			"answers": [
+				{"index":"a","answer": "7 jaar"},
+				{"index":"b","answer": "8 jaar"},
+				{"index":"c","answer": "9 jaar"},
+				{"index":"d","answer": "10 jaar"}
+			]
+		},{ 
+			"questionId":"2",
+			"time":"14", 
+			"question":"Hoeveel bezoekers serveren we maandelijks een pagina uit?",
+			"answers": [
+				{"index":"a","answer": "2.000.000"},
+				{"index":"b","answer": "8.000.000"},
+				{"index":"c","answer": "9.000.000"},
+				{"index":"d","answer": "100.000.001"}
+			]
+		},{ 
+			"questionId":"3",
+			"time":"5", 
+			"question":"Hoeveel medewerkers telt RHM inmiddels?",
+			"answers": [
+				{"index":"a","answer": "73"},
+				{"index":"b","answer": "83"},
+				{"index":"c","answer": "93"},
+				{"index":"d","answer": "503"}
+			]
+		},{ 
+			"questionId":"4",
+			"time":"10",
+			"question":"Hoe lang zijn de goaltjes weg geweest?",
+			"answers": [
+				{"index":"a","answer": "1 maand"},
+				{"index":"b","answer": "2 maanden"},
+				{"index":"c","answer": "precies tijdens het mooie weer"},
+				{"index":"d","answer": "10 jaar"}
+			]
+		},{ 
+			"questionId":"5",
+			"time":"14", 
+			"question":"Hoeveel teams hebben we nu?",
+			"answers": [
+				{"index":"a","answer": "5"},
+				{"index":"b","answer": "2"},
+				{"index":"c","answer": "3"},
+				{"index":"d","answer": "12"}
+			]
+		}
+	]
+}

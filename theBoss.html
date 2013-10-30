@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pubquiz POC</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/Css/normalize.css" />
+    <link rel="stylesheet" href="/static/Css/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+
+    <section id="site">
+      <header id="header"><h1>Nodepub quizJS</h1></header>
+      <section id="main">
+        <p><span id="client_count">0</span> connected clients</p>
+        <p>vraag: <span id="vraag"></span></p>
+        <button id="startTest">Start de test</button>
+        <button id="nextQuestion">Volgende vraag</button>
+        <button id="startTime">Start de tijd</button>
+      </section>
+    </section>
+
+
+    <script src="/static/Scripts/main.js"></script>
+</body>
+</html>

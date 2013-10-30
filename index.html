@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pubquiz POC</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/Css/normalize.css" />
+    <link rel="stylesheet" href="/static/Css/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+  </head>
+  <body>
+
+    <section id="site">
+      <header id="header"><h1>Redhotminute PUBQUIZ</h1></header>
+      <section id="main">
+        <div id="stats"><p>Aantal verbonden clients: <span id="client_count">0</span></p></div>
+        <div id="initScreen">
+          <p><img src="/static/Img/logo.png" />Welkom bij de POC voor een RHM pubquiz, op basis van een node app... Vet lauwe shit natuurlijk!</p>
+          <p>De test kan op elk moment beginnen, net wanneer ik op de knop druk, dus zit er klaar voor! You don't wanna miss it!</p>
+        </div>
+        <div id="gameZone">
+          <div id="question">Vraag <span id="questionId"></span>: <span id="vraag"></span></div>
+          <div id="answers">
+
+          </div>
+          <div class="timer">resterende tijd:
+            <span class="time"></span>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <script src="/static/Scripts/main.js"></script>
+</body>
+</html>
