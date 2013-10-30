@@ -1,7 +1,8 @@
 $(document).ready(function () {
 	$clientCounter = $("#client_count")
 
-	var socket = io.connect('http://10.1.60.160:4000');
+	var full = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+	var socket = io.connect(full);
 	
 	socket.on('updateClients', function(msg){
 		updateClients(msg)
