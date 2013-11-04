@@ -1,11 +1,11 @@
-var express = require('express');
-var app = express();
-var socket = require('socket.io');
-var server = app.listen(4000);
-var io = socket.listen(server);
-var fs = require('fs');
-var file = './test.json';
-var jQuery = require('jQuery');
+var express = require('express'),
+	app = express(),
+	socket = require('socket.io'),
+	server = app.listen(4000),
+	io = socket.listen(server),
+	fs = require('fs'),
+	file = './test.json',
+	jQuery = require('jQuery');
 
 app.use('/static', express.static(__dirname + '/static'));
 
@@ -23,7 +23,8 @@ var activeClients = 0,
 	currentQuestion = 0,
 	jsonQuestions = {},
 	questions = {},
-	sendQuestionNode = {};
+	sendQuestionNode = {},
+	teams = [];
 
 
  fs.readFile(file, 'utf8', function (err, data) {
@@ -56,6 +57,18 @@ io.sockets.on('connection', function(socket){
 	
 	socket.on('bossSaysStartTime', function () {
         io.sockets.emit('startTime', sendQuestionNode);
+    });
+
+    //teamEnter
+    socket.on('teamEnter', function (data) {
+        // save teamname and connect it to session 
+        var teamInfo = new Object();
+            teamInfo.teamName     = data.teamName;
+            teamInfo.clientId     = socket.id;
+            teams.push(teamInfo);
+
+        socket.emit('removeModal');
+        io.sockets.emit('teamsUpdate', teams);
     });
 
 

@@ -8,6 +8,14 @@ $(document).ready(function () {
 		updateClients(msg)
 	});
 
+	socket.on('removeModal', function () {
+		removeModal();
+	});
+
+	socket.on('teamsUpdate', function (data) {
+		teamsUpdate(data);
+	});	
+
 	socket.on('startTest', function (data) {
 		startTest();
 	});	
@@ -32,10 +40,31 @@ $(document).ready(function () {
 	  socket.emit('bossSaysStartTime');
 	});
 
+	$('#meeDoen').on('click', function(e){
+	  e.preventDefault();
+	  if($('input[name="teamName"]').val() != '') {
+	  	var data = new Object();
+	  	data.teamName = $('input[name="teamName"]').val();
+
+	  	socket.emit('teamEnter', data );
+	  }
+	});	
+
 });
 
 var updateClients = function (msg) {
 	$clientCounter.html(msg.clients);
+}
+
+var removeModal = function () {
+	$('#enter').hide();
+}
+
+var teamsUpdate = function (data) {
+	$('#teams').empty();
+	$.each(data, function(key,val) {
+		$('#teams').append('<li>'+val.teamName+'</li>')
+	})
 }
 
 var startTest = function () {

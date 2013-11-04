@@ -16,8 +16,15 @@
 
     <section id="site">
       <header id="header"><h1>Redhotminute PUBQUIZ</h1></header>
+      <section id="enter">
+        <h2>Vul je teamnaam in:</h2>
+        <input type="text" name="teamName" autocomplete="off" /><input type="submit" id="meeDoen" value="Meedoen!" />
+      </section>
       <section id="main">
-        <div id="stats"><p>Aantal verbonden clients: <span id="client_count">0</span></p></div>
+        <div id="stats">
+          <p>Aantal verbonden clients: <span id="client_count">0</span></p>
+          <ul id="teams"></ul>
+        </div>
         <div id="initScreen">
           <p><img src="/static/Img/logo.png" />Welkom bij de POC voor een RHM pubquiz, op basis van een node app... Vet lauwe shit natuurlijk!</p>
           <p>De test kan op elk moment beginnen, net wanneer ik op de knop druk, dus zit er klaar voor! You don't wanna miss it!</p>

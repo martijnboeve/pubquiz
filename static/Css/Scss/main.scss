@@ -37,4 +37,9 @@
 			}
 		}
 	}
+
+	#enter {
+		position: absolute; width: 400px; padding: 30px; top: 50%; margin-top: -50px; left: 50%; margin-left: -200px; background: #fff; z-index:99; box-shadow: 0 0 6px rgba(0,0,0,0.25);
+		h2 {margin-top: 0;}
+	}
 } 
