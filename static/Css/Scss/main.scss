@@ -6,6 +6,7 @@
 	#initScreen { position: relative; font-family: 'Gudea', sans-serif; font-size: 18px; line-height: 25px; display: block; padding-bottom: 40px; width: 550px;
 		html.testStarted & { display: none; }
 		img {float: left; margin: 0 20px 10px;}
+		.teamNameNotSet & { display: none; }
 	}
 	#gameZone { position: relative; min-height: 300px; text-align: center; font-family: 'Gudea', sans-serif; font-size: 18px; line-height: 25px; display: none;
 		html.testStarted & { display: block; }
@@ -39,7 +40,8 @@
 	}
 
 	#enter {
-		position: absolute; width: 400px; padding: 30px; top: 50%; margin-top: -50px; left: 50%; margin-left: -200px; background: #fff; z-index:99; box-shadow: 0 0 6px rgba(0,0,0,0.25);
+		position: absolute; width: 450px; padding: 30px; top: 50%; margin-top: -50px; left: 50%; margin-left: -250px; background: #fff; z-index:99; box-shadow: 0 0 6px rgba(0,0,0,0.25);
 		h2 {margin-top: 0;}
+		html.teamNameSet & { display: none; }
 	}
 } 

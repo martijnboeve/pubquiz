@@ -83,4 +83,13 @@ function clientConnect(socket){
 function clientDisconnect(){
   activeClients -=1;
   io.sockets.emit('updateClients', {clients:activeClients});
+  for( var i=0, len=teams.length; i<len; ++i ){
+        var t = teams[i];
+        if(t.clientId == socket.id){
+            teams.splice(i,1);
+            break;
+        }
+    }
+    io.sockets.emit('teamsUpdate', teams);
+
 }

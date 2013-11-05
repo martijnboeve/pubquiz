@@ -48,7 +48,11 @@ html.testStarted #site #initScreen {
   float: left;
   margin: 0 20px 10px;
 }
-/* line 10, Scss/main.scss */
+/* line 9, Scss/main.scss */
+.teamNameNotSet #site #initScreen {
+  display: none;
+}
+/* line 11, Scss/main.scss */
 #site #gameZone {
   position: relative;
   min-height: 300px;
@@ -58,11 +62,11 @@ html.testStarted #site #initScreen {
   line-height: 25px;
   display: none;
 }
-/* line 11, Scss/main.scss */
+/* line 12, Scss/main.scss */
 html.testStarted #site #gameZone {
   display: block;
 }
-/* line 12, Scss/main.scss */
+/* line 13, Scss/main.scss */
 #site #gameZone #question {
   border-bottom: 1px dashed #C9C9C9;
   font-size: 30px;
@@ -71,13 +75,13 @@ html.testStarted #site #gameZone {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 13, Scss/main.scss */
+/* line 14, Scss/main.scss */
 #site #gameZone .timer {
   font-size: 10px;
   position: relative;
   text-align: left;
 }
-/* line 14, Scss/main.scss */
+/* line 15, Scss/main.scss */
 #site #gameZone .timer .time {
   position: absolute;
   height: 8px;
@@ -89,37 +93,37 @@ html.testStarted #site #gameZone {
   -moz-transition: right 2s linear;
   transition: right 2s linear;
 }
-/* line 21, Scss/main.scss */
+/* line 22, Scss/main.scss */
 #site .timeDone {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
 }
-/* line 23, Scss/main.scss */
+/* line 24, Scss/main.scss */
 #site .timeDone .chooseAnswer.selected {
   background: #bada55;
   color: #fff;
 }
-/* line 24, Scss/main.scss */
+/* line 25, Scss/main.scss */
 #site .timeDone .chooseAnswer.hover {
   background: transparent !important;
   color: #000;
 }
-/* line 27, Scss/main.scss */
+/* line 28, Scss/main.scss */
 #site #answers {
   text-align: left;
 }
-/* line 28, Scss/main.scss */
+/* line 29, Scss/main.scss */
 #site #answers ul {
   margin: 0;
   padding: 0;
 }
-/* line 29, Scss/main.scss */
+/* line 30, Scss/main.scss */
 #site #answers ul li {
   list-style: none;
   margin: 0 0 20px;
 }
-/* line 30, Scss/main.scss */
+/* line 31, Scss/main.scss */
 #site #answers ul li .chooseAnswer {
   cursor: pointer;
   font-family: 'Alegreya SC', serif;
@@ -139,30 +143,34 @@ html.testStarted #site #gameZone {
   -moz-transition: background 250ms linear;
   transition: background 250ms linear;
 }
-/* line 34, Scss/main.scss */
+/* line 35, Scss/main.scss */
 #site #answers ul li .chooseAnswer.selected, #site #answers ul li .chooseAnswer.selected.hover {
   background: #bada55;
   color: #fff;
 }
-/* line 35, Scss/main.scss */
+/* line 36, Scss/main.scss */
 #site #answers ul li .chooseAnswer.hover {
   background: #c9c9c9;
   color: #000;
 }
-/* line 41, Scss/main.scss */
+/* line 42, Scss/main.scss */
 #site #enter {
   position: absolute;
-  width: 400px;
+  width: 450px;
   padding: 30px;
   top: 50%;
   margin-top: -50px;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -250px;
   background: #fff;
   z-index: 99;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 }
-/* line 43, Scss/main.scss */
+/* line 44, Scss/main.scss */
 #site #enter h2 {
   margin-top: 0;
+}
+/* line 45, Scss/main.scss */
+html.teamNameSet #site #enter {
+  display: none;
 }

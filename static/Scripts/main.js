@@ -57,7 +57,7 @@ var updateClients = function (msg) {
 }
 
 var removeModal = function () {
-	$('#enter').hide();
+	$('html').removeClass('teamNameNotSet').addClass('teamNameSet');
 }
 
 var teamsUpdate = function (data) {
