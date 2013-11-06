@@ -1,4 +1,14 @@
-/* line 1, Scss/main.scss */
+/* BORDER RADIUS */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* TRANSFORM  */
+/* TRANSITION */
+/* CLEARFIX */
+/* OPACITY */
+/* TEXT_TRUNCATE WITH ELLIPSIS */
+/* LINEAR GRADIENT */
+/* BACKGROUND SIZE */
+/* line 3, Scss/main.scss */
 #site {
   width: 100%;
   max-width: 940px;
@@ -6,7 +16,7 @@
   position: relative;
   padding-top: 100px;
 }
-/* line 2, Scss/main.scss */
+/* line 4, Scss/main.scss */
 #site #header {
   position: absolute;
   top: 0;
@@ -15,21 +25,21 @@
   right: 0;
   border-bottom: 5px solid #CC0000;
 }
-/* line 3, Scss/main.scss */
+/* line 5, Scss/main.scss */
 #site #header h1 {
   font-family: 'Alegreya SC', serif;
   font-size: 24px;
   line-height: 31px;
   font-weight: 900;
 }
-/* line 5, Scss/main.scss */
+/* line 7, Scss/main.scss */
 #site #stats {
   position: absolute;
   bottom: 0px;
   right: 0px;
   font-size: 10px;
 }
-/* line 6, Scss/main.scss */
+/* line 8, Scss/main.scss */
 #site #initScreen {
   position: relative;
   font-family: 'Gudea', sans-serif;
@@ -39,20 +49,29 @@
   padding-bottom: 40px;
   width: 550px;
 }
-/* line 7, Scss/main.scss */
+/* line 54, Scss/_mixins.scss */
+#site #initScreen {
+  *zoom: 1;
+}
+/* line 58, Scss/_mixins.scss */
+#site #initScreen:before, #site #initScreen:after {
+  content: "";
+  display: table;
+}
+/* line 62, Scss/_mixins.scss */
+#site #initScreen:after {
+  clear: both;
+}
+/* line 10, Scss/main.scss */
 html.testStarted #site #initScreen {
   display: none;
 }
-/* line 8, Scss/main.scss */
+/* line 11, Scss/main.scss */
 #site #initScreen img {
   float: left;
   margin: 0 20px 10px;
 }
-/* line 9, Scss/main.scss */
-.teamNameNotSet #site #initScreen {
-  display: none;
-}
-/* line 11, Scss/main.scss */
+/* line 14, Scss/main.scss */
 #site #gameZone {
   position: relative;
   min-height: 300px;
@@ -62,11 +81,11 @@ html.testStarted #site #initScreen {
   line-height: 25px;
   display: none;
 }
-/* line 12, Scss/main.scss */
+/* line 15, Scss/main.scss */
 html.testStarted #site #gameZone {
   display: block;
 }
-/* line 13, Scss/main.scss */
+/* line 16, Scss/main.scss */
 #site #gameZone #question {
   border-bottom: 1px dashed #C9C9C9;
   font-size: 30px;
@@ -75,13 +94,13 @@ html.testStarted #site #gameZone {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 14, Scss/main.scss */
+/* line 17, Scss/main.scss */
 #site #gameZone .timer {
   font-size: 10px;
   position: relative;
   text-align: left;
 }
-/* line 15, Scss/main.scss */
+/* line 18, Scss/main.scss */
 #site #gameZone .timer .time {
   position: absolute;
   height: 8px;
@@ -93,37 +112,37 @@ html.testStarted #site #gameZone {
   -moz-transition: right 2s linear;
   transition: right 2s linear;
 }
-/* line 22, Scss/main.scss */
+/* line 25, Scss/main.scss */
 #site .timeDone {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
 }
-/* line 24, Scss/main.scss */
+/* line 27, Scss/main.scss */
 #site .timeDone .chooseAnswer.selected {
   background: #bada55;
   color: #fff;
 }
-/* line 25, Scss/main.scss */
+/* line 28, Scss/main.scss */
 #site .timeDone .chooseAnswer.hover {
   background: transparent !important;
   color: #000;
 }
-/* line 28, Scss/main.scss */
+/* line 31, Scss/main.scss */
 #site #answers {
   text-align: left;
 }
-/* line 29, Scss/main.scss */
+/* line 32, Scss/main.scss */
 #site #answers ul {
   margin: 0;
   padding: 0;
 }
-/* line 30, Scss/main.scss */
+/* line 33, Scss/main.scss */
 #site #answers ul li {
   list-style: none;
   margin: 0 0 20px;
 }
-/* line 31, Scss/main.scss */
+/* line 34, Scss/main.scss */
 #site #answers ul li .chooseAnswer {
   cursor: pointer;
   font-family: 'Alegreya SC', serif;
@@ -143,34 +162,52 @@ html.testStarted #site #gameZone {
   -moz-transition: background 250ms linear;
   transition: background 250ms linear;
 }
-/* line 35, Scss/main.scss */
+/* line 38, Scss/main.scss */
 #site #answers ul li .chooseAnswer.selected, #site #answers ul li .chooseAnswer.selected.hover {
   background: #bada55;
   color: #fff;
 }
-/* line 36, Scss/main.scss */
+/* line 39, Scss/main.scss */
 #site #answers ul li .chooseAnswer.hover {
   background: #c9c9c9;
   color: #000;
 }
-/* line 42, Scss/main.scss */
+/* line 45, Scss/main.scss */
 #site #enter {
-  position: absolute;
-  width: 450px;
+  position: relative;
   padding: 30px;
-  top: 50%;
-  margin-top: -50px;
-  left: 50%;
-  margin-left: -250px;
   background: #fff;
   z-index: 99;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
-/* line 44, Scss/main.scss */
+/* line 54, Scss/_mixins.scss */
+#site #enter {
+  *zoom: 1;
+}
+/* line 58, Scss/_mixins.scss */
+#site #enter:before, #site #enter:after {
+  content: "";
+  display: table;
+}
+/* line 62, Scss/_mixins.scss */
+#site #enter:after {
+  clear: both;
+}
+/* line 48, Scss/main.scss */
 #site #enter h2 {
   margin-top: 0;
 }
-/* line 45, Scss/main.scss */
+/* line 49, Scss/main.scss */
 html.teamNameSet #site #enter {
-  display: none;
+  opacity: 0;
+  max-height: 0;
+}
+/* line 71, Scss/_mixins.scss */
+html.ltie9 html.teamNameSet #site #enter {
+  filter: alpha(opacity=0);
 }

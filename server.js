@@ -13,8 +13,8 @@ app.get('/index.html', function(request, response){
   response.sendfile(__dirname + "/index.html");
 });
 
-app.get('/theBoss.html', function(request, response){
-  response.sendfile(__dirname + "/theBoss.html");
+app.get('/dashboard.html', function(request, response){
+  response.sendfile(__dirname + "/dashboard.html");
 });
  
 app.use(express.static(__dirname + '/Css'));

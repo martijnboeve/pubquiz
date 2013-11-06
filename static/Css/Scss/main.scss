@@ -1,12 +1,15 @@
+@import "_mixins.scss"; 
+
 #site {width: 100%; max-width: 940px; margin: 0 auto; position: relative; padding-top: 100px;
 	#header { position: absolute; top: 0; height: 60px; left: 0; right: 0; border-bottom: 5px solid #CC0000;
 		h1 {font-family: 'Alegreya SC', serif; font-size: 24px; line-height: 31px; font-weight: 900;}
 	}
 	#stats { position: absolute; bottom: 0px; right: 0px; font-size: 10px; }
 	#initScreen { position: relative; font-family: 'Gudea', sans-serif; font-size: 18px; line-height: 25px; display: block; padding-bottom: 40px; width: 550px;
+		@include clearfix();
 		html.testStarted & { display: none; }
 		img {float: left; margin: 0 20px 10px;}
-		.teamNameNotSet & { display: none; }
+		// .teamNameNotSet & { display: none; }
 	}
 	#gameZone { position: relative; min-height: 300px; text-align: center; font-family: 'Gudea', sans-serif; font-size: 18px; line-height: 25px; display: none;
 		html.testStarted & { display: block; }
@@ -40,8 +43,9 @@
 	}
 
 	#enter {
-		position: absolute; width: 450px; padding: 30px; top: 50%; margin-top: -50px; left: 50%; margin-left: -250px; background: #fff; z-index:99; box-shadow: 0 0 6px rgba(0,0,0,0.25);
+		position: relative; padding: 30px; background: #fff; z-index:99; box-shadow: 0 0 6px rgba(0,0,0,0.25);
+		@include transition(all 0.5s linear); @include clearfix();
 		h2 {margin-top: 0;}
-		html.teamNameSet & { display: none; }
+		html.teamNameSet & { @include opacity(0); max-height: 0; }
 	}
 } 
