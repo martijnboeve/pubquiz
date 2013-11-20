@@ -2,13 +2,15 @@
 
 #site {width: 100%; max-width: 940px; margin: 0 auto; position: relative; padding-top: 100px;
 	#header { position: absolute; top: 0; height: 60px; left: 0; right: 0; border-bottom: 5px solid #CC0000;
-		h1 {font-family: 'Alegreya SC', serif; font-size: 24px; line-height: 31px; font-weight: 900;}
+		h1 {font-family: 'Alegreya SC', serif; font-size: 24px; line-height: 31px; font-weight: 900;
+			.oppositeText { float: right; }
+		}
 	}
-	#stats { position: absolute; bottom: 0px; right: 0px; font-size: 10px; }
+	#stats { position: absolute; top: 0px; right: -180px; font-size: 10px; width: 150px;}
 	#initScreen { position: relative; font-family: 'Gudea', sans-serif; font-size: 18px; line-height: 25px; display: block; padding-bottom: 40px; width: 550px;
-		@include clearfix();
-		html.testStarted & { display: none; }
-		img {float: left; margin: 0 20px 10px;}
+		@include transition(all 0.3s linear);  @include clearfix(); @include opacity(0.5);
+		html.teamNameSet & { @include opacity(1); }
+		img {float: left; margin: 0 20px 10px; width: 200px;}
 		// .teamNameNotSet & { display: none; }
 	}
 	#gameZone { position: relative; min-height: 300px; text-align: center; font-family: 'Gudea', sans-serif; font-size: 18px; line-height: 25px; display: none;
@@ -30,7 +32,7 @@
 	}
 	#answers { text-align: left;
 		ul {margin: 0; padding: 0; 
-			li { list-style: none; margin: 0 0 20px; 
+			li { list-style: none; margin: 0 0 20px; text-align: center;
 				.chooseAnswer { cursor: pointer; font-family: 'Alegreya SC', serif; font-size: 24px; line-height: 31px; font-weight: 900; padding: 5px 5px 13px 14px; margin-right: 25px; width: 25px; height: 25px; border-radius: 15px; border: 2px solid #000; position: relative; box-sizing: border-box; display: inline-block; 
 					-webkit-transition: background 250ms linear;
 				       -moz-transition: background 250ms linear;
@@ -38,14 +40,24 @@
 					&.selected, &.selected.hover { background: #bada55; color: #fff; }
 					&.hover { background: #c9c9c9; color: #000; }
 				}
+				input[type="text"] {padding: 10px; width: 55%;}
 			}
 		}
 	}
 
 	#enter {
 		position: relative; padding: 30px; background: #fff; z-index:99; box-shadow: 0 0 6px rgba(0,0,0,0.25);
-		@include transition(all 0.5s linear); @include clearfix();
+		@include transition((max-height 0.3s linear, opacity 0.3s)); @include clearfix();
 		h2 {margin-top: 0;}
-		html.teamNameSet & { @include opacity(0); max-height: 0; }
+		html.teamNameSet & { @include opacity(0); max-height: 0; overflow: hidden; padding: 0 10px; }
+	}
+
+	#teams { margin: 0; padding: 0; margin-top: 30px; }
+	.teamInfo {border-bottom: 1px dashed #c3c3c3; margin-top: 20px; padding-bottom: 5px; clear: both; @include box-sizing(border-box); overflow: hidden;
+		html.dash { margin-top: 0; padding-bottom: 20px;}
+		dt,dd {font-family: 'Arial', serif; font-size: 16px; line-height: 23px; font-weight: 900; overflow: hidden; display: inline;}
+		dt { width: 50%; float: left; clear: both; }
+		dd { width: 50%; float: left; margin: 0; font-size: 23px; line-height: 31px; }
+
 	}
 } 
